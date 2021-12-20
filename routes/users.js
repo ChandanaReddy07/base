@@ -76,7 +76,7 @@ router.post(
     if (err) {
       console.log(err);
       return res.status(400).json({
-        err: err
+        err: "cant save to the DB",
       });
     }
     res.json(user);
