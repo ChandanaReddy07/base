@@ -8,9 +8,10 @@ var userRoutes = require('./routes/users');
 var cors = require('cors')
 
 //db connection
-mongoose.connect(process.env.DATABASE,{
+mongoose.connect("mongodb+srv://chandana07:123654hgf@base01.hl68w.mongodb.net/test",{
     useNewUrlParser:true,
     useUnifiedTopology:true,
+  
 }).then(()=>{
     console.log("DB CONNECTED")
 }).catch(
