@@ -16,13 +16,15 @@ mongoose.connect(process.env.DATABASE,{
     console.log("DB NOT CONNECTED")
 );
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 //middlewares
 app.use(bodyParser.json());
 app.use(cookieParser());
 //routes
-app.use("/",userRoutes);
-
+app.use("/api",userRoutes);
+app.use("/api",(req,res)=>(
+    res.json("hello there ..!")
+));
 
 app.listen(PORT,()=>console.log(`haloo running in port${PORT}..`))

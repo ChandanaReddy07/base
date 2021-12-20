@@ -4,6 +4,11 @@ var router = express.Router();
 const {check} =require("express-validator")
 const User = require("../models/user")
 
+
+//
+router.get("/",(req,res)=>(
+  res.json("hello there ..!")
+));
 //user login 
 router.get("/login", [
     
