@@ -16,7 +16,7 @@ mongoose.connect(process.env.DATABASE,{
     console.log("DB NOT CONNECTED")
 );
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 //middlewares
 app.use(bodyParser.json());
