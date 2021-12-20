@@ -4,8 +4,6 @@ require('dotenv').config()
 const mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
-var cors = require('cors')
-
 var userRoutes = require('./routes/users');
 
 //db connection
@@ -18,7 +16,7 @@ mongoose.connect(process.env.DATABASE,{
     console.log("DB NOT CONNECTED")
 );
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 //middlewares
 app.use(bodyParser.json());
